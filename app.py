@@ -164,7 +164,7 @@ def add_predictions(input_data) :
 
     #http://18.223.133.31:5000/
 
-    resp = requests.post("http://18.219.34.29:5000/", json=data)
+    resp = requests.post("http://18.220.107.211:5000/", json=data)
 
     pred_result = resp.json()["Results"]["result"]
     prob_beg = resp.json()["Results"]["prob_beg"]
