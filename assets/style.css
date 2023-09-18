@@ -1,0 +1,21 @@
+.e1f1d6gn1  {
+    padding: 1.5rem;
+    border-radius: 0.7rem;
+    text-align: center;
+    -webkit-box-shadow: 0px 5px 15px 5px rgba(23,23,23,0.5); 
+    box-shadow: 0px 5px 15px 5px rgba(23,23,23,0.5);
+  }
+  
+  .diagnosis {
+    color: #fff;
+    padding: 0.2em 0.5em;
+    border-radius: 0.5em;
+  }
+  
+  .diagnosis.benign {
+    background-color: #01DB4B;
+  }
+  
+  .diagnosis.malicious {
+    background-color: #ff4b4b
+  }
