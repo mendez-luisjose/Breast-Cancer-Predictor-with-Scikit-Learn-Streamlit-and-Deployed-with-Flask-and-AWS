@@ -7,8 +7,8 @@ from PIL import Image
 import plost
 import requests
 
-MODEL_PATH = f'./model/lr_model.pkl'
-SCALER_PATH = f'./model/scaler.pkl'
+#MODEL_PATH = f'./model/lr_model.pkl'
+#SCALER_PATH = f'./model/scaler.pkl'
 IMG_SIDEBAR_PATH = "./assets/img.jpg"
 BGR_PATH = "./assets/background.png"
 
@@ -17,8 +17,8 @@ def load_pkl(fname):
         obj = pickle.load(f)
     return obj
 
-model = load_pkl(MODEL_PATH)
-scaler = load_pkl(SCALER_PATH)
+#model = load_pkl(MODEL_PATH)
+#scaler = load_pkl(SCALER_PATH)
 
 def get_clean_data():
   data = pd.read_csv("./dataset/data.csv")
@@ -165,7 +165,7 @@ def add_predictions(input_data) :
 
     #http://18.223.133.31:5000/
 
-    resp = requests.post("http://18.216.219.18:5000/", json=data)
+    resp = requests.post("http://18.219.34.29:5000/", json=data)
 
     pred_result = resp.json()["Results"]["result"]
     prob_beg = resp.json()["Results"]["prob_beg"]
