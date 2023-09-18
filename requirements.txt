@@ -2,7 +2,6 @@ requests
 Pillow
 streamlit
 numpy
-pickle
 pandas
 plotly
 plost
