@@ -1,4 +1,5 @@
 import streamlit as st
+import pickle 
 import pandas as pd
 import plotly.graph_objects as go
 import numpy as np
@@ -6,8 +7,10 @@ from PIL import Image
 import plost
 import requests
 
-#MODEL_PATH = f'./model/lr_model.pkl'
-#SCALER_PATH = f'./model/scaler.pkl'
+API = ""
+
+MODEL_PATH = f'./model/lr_model.pkl'
+SCALER_PATH = f'./model/scaler.pkl'
 IMG_SIDEBAR_PATH = "./assets/img.jpg"
 BGR_PATH = "./assets/background.png"
 
@@ -16,8 +19,8 @@ def load_pkl(fname):
         obj = pickle.load(f)
     return obj
 
-#model = load_pkl(MODEL_PATH)
-#scaler = load_pkl(SCALER_PATH)
+model = load_pkl(MODEL_PATH)
+scaler = load_pkl(SCALER_PATH)
 
 def get_clean_data():
   data = pd.read_csv("./dataset/data.csv")
@@ -160,11 +163,7 @@ def add_predictions(input_data) :
 
     data = {'array': input_array}
 
-    #resp = requests.post("http://127.0.0.1:5000", json=data)
-
-    #http://18.223.133.31:5000/
-
-    resp = requests.post("http://18.220.107.211:5000/", json=data)
+    resp = requests.post(API, json=data)
 
     pred_result = resp.json()["Results"]["result"]
     prob_beg = resp.json()["Results"]["prob_beg"]
