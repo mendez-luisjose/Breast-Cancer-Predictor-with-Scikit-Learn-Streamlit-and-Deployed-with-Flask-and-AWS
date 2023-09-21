@@ -4,7 +4,7 @@
 
 ## Binary Classificator Breast Cancer Model with Scikit Learn, Streamlit, Flask and AWS
 
-The Model was trained with Tabular Breast Cancer Data and with the `Linear Regression` Scikit-Learn Architecture. The Model predicts if a given cell is either `Benign` or `Malignant`, also the U.I. to select the parameters of the cell was built with Streamlit and the API with Flask. Last, the Flask API was deployed on AWS EC2.
+The Model was trained with Tabular Breast Cancer Data and with the `Logistic Regression` Scikit-Learn Architecture. The Model predicts if a given cell is either `Benign` or `Malignant`, also the U.I. to select the parameters of the cell was built with Streamlit and the API with Flask. Last, the Flask API was deployed on AWS EC2.
 
 ![](./assets/prev-3.gif)
 
