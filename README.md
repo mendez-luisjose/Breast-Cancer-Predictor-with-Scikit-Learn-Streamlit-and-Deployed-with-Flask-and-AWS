@@ -25,3 +25,4 @@ streamlit run app.py
 
 ## Resources
 - Breast Cancer Dataset: https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data
+- Breast Cancer Predictor Preview: https://www.youtube.com/watch?v=OaPK7luz-4M
